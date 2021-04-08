@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+   <!--  <suite name="Suite">     serial execution of all tests --> 
+ 
+  <suite name="Suite" parallel ="tests"> <!--sequential  execution -->
+ 
+ <listeners>
+ <listener class-name="academy.E2EProject.Listeners"></listener>
+ </listeners>
+  
+  <test thread-count="5" name="ValidateMenu">
+    <classes>
+      <class name="academy.E2EProject.ValidateMenu"/>
+      
+      </classes>
+  </test>
+     
+     <test thread-count="5" name="ValidateTitle">
+    <classes>
+       
+      <class name="academy.E2EProject.ValidateTitle"/>
+   
+    </classes>
+  
+  </test> <!-- Test -->
+
+<!--    <class name="academy.E2EProject.HomePage"/>    -->
+
+
+</suite> <!-- Suite -->
